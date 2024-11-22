@@ -7,17 +7,17 @@ import {
 } from 'react-redux';
 import { userReducer } from './slices/userSlice';
 import { ingredientsSliceReducer } from './slices/ingredientsSlice';
-import { burgerConstructorReducer } from './slices/constructorSlice';
-import { addOrderReducer } from './slices/addOrderSlice';
+import { constructorReducer } from './slices/constructorSlice';
+import { createOrderReducer } from './slices/createOrderSlice';
 import { feedReducer } from './slices/feedSlice';
 import { ordersReducer } from './slices/orderSlice';
 
 const rootReducer = combineReducers({
   user: userReducer,
   burgerIngredients: ingredientsSliceReducer,
-  burgerConstructor: burgerConstructorReducer,
-  addOrder: addOrderReducer,
-  feed: feedReducer,
+  burgerConstructor: constructorReducer,
+  createOrder: createOrderReducer,
+  feeds: feedReducer,
   orders: ordersReducer
 }); // Заменить на импорт настоящего редьюсера
 

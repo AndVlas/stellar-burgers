@@ -3,9 +3,9 @@ import { BurgerConstructorElementUI } from '@ui';
 import { BurgerConstructorElementProps } from './type';
 import { useDispatch } from '../../services/store';
 import {
-  moveIngredientDown,
+  moveDownIngredient,
   removeIngredient,
-  moveIngredientUp
+  moveUpIngredient
 } from '../../services/slices/constructorSlice';
 
 export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(
@@ -13,11 +13,11 @@ export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(
     const dispatch = useDispatch();
 
     const handleMoveDown = () => {
-      dispatch(moveIngredientDown(index));
+      dispatch(moveDownIngredient(index));
     };
 
     const handleMoveUp = () => {
-      dispatch(moveIngredientUp(index));
+      dispatch(moveUpIngredient(index));
     };
 
     const handleClose = () => {
