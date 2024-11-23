@@ -27,7 +27,7 @@ export const constructorSlice = createSlice({
         }
       },
       prepare: (ingredient: TConstructorIngredient) => ({
-        payload: { ...ingredient, uniqueId: uuid4() }
+        payload: { ...ingredient, id: uuid4() }
       })
     },
     removeIngredient: (
