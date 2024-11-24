@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TOrder } from '@utils-types';
-import { getFeedsApi } from '@api';
+import { getFeedsApi } from '../../utils/burger-api';
 
 export const getFeedsList = createAsyncThunk('feeds/getFeeds', getFeedsApi);
 
@@ -16,8 +16,8 @@ export const initialState: TFeedsState = {
   orders: [],
   total: 0,
   totalToday: 0,
-  loading: true,
-  error: null
+  loading: false,
+  error: ''
 };
 
 export const feedSlice = createSlice({
